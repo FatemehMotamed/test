@@ -1,0 +1,17 @@
+{% extends 'techblog/main.html' %}
+{% block content %}
+    <form style="margin-top: 10%" action="{% url 'update' post.id %}" method="post">
+        title
+        <input type="text" value="{{ post.title }}"><br>
+        body
+        <input type="text" value="{{ post.body }}"><br>
+        author
+        <input type="text" value="{{ post.author }}"><br>
+        tag
+        <input type="text" value="{{ post.tag }}"><br>
+        views
+        <input type="text" value="{{ post.views }}"><br>
+        <input type="submit" value="Edit">
+
+    </form>
+{% endblock %}

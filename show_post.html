@@ -1,0 +1,33 @@
+{% for post in posts %}
+    <div class="row">
+            <div class="col-2">
+                <div id="the_Title">{{ post.title }} <img src="/static/photo/site.png" ></div>
+            </div>
+            <div class="col-8"></div>
+            <div class="col-2">
+                <b id="thevid">Trend Videos</b>
+            </div>
+
+        </div><br>
+    <div class="row">
+            <div class="col-10 imgsizer img-hover-zoom">
+            <!-- here will be the news  -->
+                <!-- the text and the ingredient -->
+                <div class="titleofNews">
+                    <a href="#"> </a>
+                </div>
+                <!-- the image -->
+                <img class="newss " src="/{{ post.image }}" alt="the first post image">
+            </div>
+            <div class="col-2">
+                <!-- here will be the simple videos -->
+
+
+            </div>
+
+    <a href="{% url 'read_more' post.id %}" class="btn btn-primary">view</a>
+    <a href="{% url 'update' post.id %}" class="btn btn-info">Edit</a>
+    <a href="{% url 'delete' post.id %}" class="btn btn-danger">Delete</a>
+        </div>
+
+{% endfor %}
